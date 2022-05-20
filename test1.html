@@ -1,0 +1,107 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tourism of the country New Zealand</title>
+</head>
+<body>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!---Link leaflet css and javascript--->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  </head>
+  <body>
+  <body bgcolor="#9370DB"></body>
+  <center><h1>☃️ 𝕋𝕠𝕦𝕣𝕚𝕤𝕞 𝕠𝕗 𝕥𝕙𝕖 𝕔𝕠𝕦𝕟𝕥𝕣𝕪 ℕ𝕖𝕨 ℤ𝕖𝕒𝕝𝕒𝕟𝕕 ✈️ 🐰 </h1></center>
+  <hr size = 6 noshade color="#FFCCFF">
+    <div id="map" style="width: 1800px; height: 600px"></div>
+    <!--- set center and Link map--->
+  <script>
+
+    var map = L.map('map').setView([ -42.000325148316215,173.056640625], 5);
+    mapLink ='<a href="http://openstreetmap.org">OpenStreetMap</a>';
+    L.tileLayer(
+      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+       attribution: 'Map data &copy; ' + mapLink,
+       maxZoom: 18,
+      }).addTo(map);
+      var greenIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/6655/6655226.png',
+
+      iconSize:     [43, 42], // size of the icon
+      iconAnchor:   [15, 54], // point of the icon which will correspond to marker's location
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  });
+
+      var marker = L.marker([-44.06740, 170.16415],
+    {
+      icon: greenIcon,
+      draggable:true,
+      title:'Lake Pukaki',
+      opacity:1.5
+    }
+  )
+    .addTo(map)
+    .bindPopup("<b>Lake Pukaki</b>")
+    .openPopup();
+
+    var marker = L.marker([-44.00562491970363, 170.47959394868664],
+  {
+    icon: greenIcon,
+    draggable:true,
+    title:'Lake Tekapo',
+    opacity:1.5
+  }
+  )
+  .addTo(map)
+  .bindPopup("<b>Lake Tekapoi</b>")
+  .openPopup();
+
+  var marker = L.marker([-38.26053765353883, 175.10359307063624],
+  {
+  icon: greenIcon,
+  draggable:true,
+  title:'Waitomo Glowworm Caves',
+  opacity:1.5
+  }
+  )
+  .addTo(map)
+  .bindPopup("<b>Waitomo Glowworm Caves</b>")
+  .openPopup();
+
+  var marker = L.marker([-43.5234150248279, 170.152935578222],
+  {
+  icon: greenIcon,
+  draggable:true,
+  title:'Fox Glacier',
+  opacity:1.5
+  }
+  )
+  .addTo(map)
+  .bindPopup("<b>Fox Glacier</b>")
+  .openPopup();
+
+  var marker = L.marker([-37.857641895164434, 175.68076693015786],
+  {
+  icon: greenIcon,
+  draggable:true,
+  title:'Hobbiton Village',
+  opacity:1.5
+  }
+  )
+  .addTo(map)
+  .bindPopup("Hobbiton Village</b>")
+  .openPopup();
+
+  </script>
+  </body>
+  </html>
+
+</body>
+</html>
